@@ -1,14 +1,3 @@
----------------
-    Dataset
----------------
-We consider to scrape comments through python scripts for a coarse
-trial, where praw can provide us some powerful interface.
-However, the data source finally we use should be queried from the
-Google BigQuery.
-
-Preprocessing is necessary, the method used by Amy et.al. can be
-a reference.
-
 -------------------------
    User Representation
 -------------------------
@@ -34,7 +23,9 @@ Question: Do you need to regularize the integer? Is it enough to use
 just one dimension.
 
 3. Interaction
-    Something about the graphic model. Have not take a deeper look.
+    The straighforward method is just to obtain the in-degree and out-degree,
+    in this way, the construction of social network is not necessray. We can 
+    explore more features by building the social network among the target users.
 
 4. Discourse Acts
     It is based on the MIT discourse data set. We train a model on
@@ -44,4 +35,5 @@ to process the data scraped from the Google BigQuery tables.
 -------------------------
           To Do
 -------------------------
-Now let's playing around with the fuxking Google BigQuery!
+Midterm: above 3 & 4
+Final: Roles interpretation + Roles dynamic change
