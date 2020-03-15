@@ -35,5 +35,5 @@ to process the data scraped from the Google BigQuery tables.
 -------------------------
           To Do
 -------------------------
-Midterm: above 3 & 4
+Midterm: above 3(Rui) & 4 (Jianan)
 Final: Roles interpretation + Roles dynamic change
