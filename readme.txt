@@ -19,21 +19,27 @@ are dataset compatible. The topic is a more specific division than
 the subreddits, which is an attribute of a comment. The LDA model are
 used for this sub-task. In a specific entry of the user representation
 vector, we can assign each topic a integer.
-Question: Do you need to regularize the integer? Is it enough to use
-just one dimension.
 
-3. Interaction
-    The straighforward method is just to obtain the in-degree and out-degree,
-    in this way, the construction of social network is not necessray. We can 
-    explore more features by building the social network among the target users.
+
+3. Network Analysis
+Required input
+The Reddit comments collected from
+https://bigquery.cloud.google.com/dataset/fh-bigquery:reddit_comments
+
+Scripts
+generate_features.py: script for generating first-order features. Features will be outputed to multiple files, e.g. indegree, inmulti, etc. A separate file, nodes, will include all the nodes in the order followed by all other feature files. 
+
+generate_nbr_features.py: script for generating neighborhood features. Features will be outputed to multiple files as well. 
+
+combine.py: take all generated feature files and node file, and combine them into one .csv file, and save to features.csv.
 
 4. Discourse Acts
     It is based on the MIT discourse data set. We train a model on
 that data set, and then we expect it having good generalization ability
 to process the data scraped from the Google BigQuery tables.
 
--------------------------
-          To Do
--------------------------
-Midterm: above 3(Rui) & 4 (Jianan)
-Final: Roles interpretation + Roles dynamic change
+Dataset Download Link: https://github.com/google-research-datasets/coarse-discourse/blob/master/coarse_discourse_dataset.json
+
+Instruction: followed the instruction in the .ipynb file to run the code
+
+
