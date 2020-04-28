@@ -6,7 +6,7 @@ to represent its features. Here we take four categories of features
 to represent each redditor.
 
 1. LIWC
-liwc.py  
+liwc_pre.py  
 It only process the comments body, so it is totally dataset
 compatible. Note that the google bigquery imported data type is
 .csv or .json, we need to transform the data into .txt, which the
@@ -16,7 +16,7 @@ features in corresponding users.
 
 
 2. Topics
-topics_script2.py
+topic_script2.ipynb
     Topics are also based on comments body, which means this feature
 are dataset compatible. The topic is a more specific division than
 the subreddits, which is an attribute of a comment. The LDA model are
@@ -44,5 +44,8 @@ to process the data scraped from the Google BigQuery tables.
 Dataset Download Link: https://github.com/google-research-datasets/coarse-discourse/blob/master/coarse_discourse_dataset.json
 
 Instruction: followed the instruction in the .ipynb file to run the code
+
+5. GMM
+gmm.py - to calculate the AIC and BIC and generate roles clustering
 
 
