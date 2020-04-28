@@ -6,14 +6,17 @@ to represent its features. Here we take four categories of features
 to represent each redditor.
 
 1. LIWC
-    It only process the comments body, so it is totally dataset
+liwc.py  
+It only process the comments body, so it is totally dataset
 compatible. Note that the google bigquery imported data type is
 .csv or .json, we need to transform the data into .txt, which the
 LIWC application program can handle. Once we get the features analyzed
 by LIWC, it is stored in .txt files, so we need to integrate these
 features in corresponding users.
 
+
 2. Topics
+topics_script2.py
     Topics are also based on comments body, which means this feature
 are dataset compatible. The topic is a more specific division than
 the subreddits, which is an attribute of a comment. The LDA model are
